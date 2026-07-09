@@ -1,0 +1,355 @@
+{
+  "project_name": "mahjong-project-parse",
+  "project_started_at_utc": "2026-07-09T06:06:13Z",
+  "last_updated_at_utc": "2026-07-09T07:48:05Z",
+  "current_stage": "coding-gate-pass",
+  "current_substep": "goal-validation-passed",
+  "completed_stages": ["0", "1", "5", "design-1", "design-2", "tdd-1", "tdd-2", "coding-1"],
+  "skipped_stages": [],
+  "next_action": {
+    "type": "next_stage",
+    "description": "Coding Agent 阶段已补齐工作台核心逻辑和 GOAL 门禁验证脚本，108 条 P0/P1 契约检查全部通过。",
+    "options": [
+      "同步产物到 document/",
+      "进入真实麻将前后端 PRD",
+      "同步 TDD 产物到 document/",
+      "先人工检查验证报告"
+    ]
+  },
+  "open_questions": [],
+  "key_decisions_made": [
+    {
+      "id": "D-001",
+      "decision": "按照 prd-master -> design-master -> tdd-master -> Coding Agent 的链路推进",
+      "stage": "0",
+      "rationale": "用户明确要求按照该链路进行开发。"
+    },
+    {
+      "id": "D-002",
+      "decision": "第一版只做解析、文档和契约，不直接修改 code-back/mahjong 的业务代码",
+      "stage": "0",
+      "rationale": "用户确认该边界正确。"
+    },
+    {
+      "id": "D-003",
+      "decision": "协作角色初步记录为 lei 负责搭建项目、提取设计方案和学习源代码，he 负责提新需求推动项目更新",
+      "stage": "1",
+      "rationale": "来自 infi.txt。"
+    },
+    {
+      "id": "D-004",
+      "decision": "第一版解析产物范围为全套解析文档、迁移计划和验收契约",
+      "stage": "1",
+      "rationale": "用户选择 1A。"
+    },
+    {
+      "id": "D-005",
+      "decision": "链路产物放 mahjong-project-parse/output/，最终文档同步到 document/",
+      "stage": "1",
+      "rationale": "用户选择 2A。"
+    },
+    {
+      "id": "D-006",
+      "decision": "第一版成功标准为 lei 能按文档讲清源码结构，he 能按文档提出新需求并判断影响范围",
+      "stage": "1",
+      "rationale": "用户选择 1A。"
+    },
+    {
+      "id": "D-007",
+      "decision": "第一版解析深度深入核心流程：入口、模块、房间、用户、牌局、RPC、匹配、异常/恢复",
+      "stage": "1",
+      "rationale": "用户选择 2A。"
+    },
+    {
+      "id": "D-008",
+      "decision": "第一版验收口径为文档完整性、源码引用、影响范围表和验收契约都齐才算完成",
+      "stage": "1",
+      "rationale": "用户选择 1A。"
+    },
+    {
+      "id": "D-009",
+      "decision": "第一版提供轻量扫描/索引脚本，但不做复杂自动化",
+      "stage": "1",
+      "rationale": "用户选择 2A。"
+    },
+    {
+      "id": "D-010",
+      "decision": "设计端形态为桌面 Web 工作台为主，移动端只做可读响应式",
+      "stage": "design-1",
+      "rationale": "用户选择 1A；PRD 显示产品是内部源码解析与协作工作台。"
+    },
+    {
+      "id": "D-011",
+      "decision": "信息架构采用左侧导航工作台：总览、模块地图、核心流程、影响范围、脚本索引、验收契约",
+      "stage": "design-1",
+      "rationale": "用户选择 2A；该结构最适合高频切换文档和判断需求影响。"
+    },
+    {
+      "id": "D-012",
+      "decision": "第一版不做登录和权限区分，所有人看到完全一样的内容",
+      "stage": "design-1",
+      "rationale": "用户选择 1C；当前产品是内部解析工作台，权限复杂度应后置。"
+    },
+    {
+      "id": "D-013",
+      "decision": "功能页面拆成 6 个核心页面：总览、模块地图、核心流程、影响范围、脚本索引、验收契约",
+      "stage": "design-1",
+      "rationale": "用户选择 2A；与 PRD MVP 功能和左侧导航一致。"
+    },
+    {
+      "id": "D-014",
+      "decision": "通用交互采用文档工作台交互：搜索、筛选、锚点目录、源码引用跳转、状态标签",
+      "stage": "design-1",
+      "rationale": "用户选择 1A；PRD 强调源码理解、影响判断和验收追踪。"
+    },
+    {
+      "id": "D-015",
+      "decision": "视觉风格采用浅色专业文档工具风：克制、清晰、代码感轻量点缀",
+      "stage": "design-1",
+      "rationale": "用户选择 2A；适合长时间阅读和对照源码。"
+    },
+    {
+      "id": "D-016",
+      "decision": "数据源采用本地 Markdown/JSON 索引，不接数据库、不接外部系统",
+      "stage": "design-1",
+      "rationale": "用户选择 1A；符合第一版轻量、只读和不做复杂自动化边界。"
+    },
+    {
+      "id": "D-017",
+      "decision": "技术栈采用静态 HTML 原型 + Markdown 文档 + Shell 脚本，本地打开即可用",
+      "stage": "design-1",
+      "rationale": "用户选择 2A；避免过度工程化和网络依赖。"
+    },
+    {
+      "id": "D-018",
+      "decision": "TDD 覆盖全 8 层：单元、组件、集成契约、E2E、安全鉴权、边界异常、无障碍、性能基线",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；第一版要作为 Coding Agent 的完整验收门禁。"
+    },
+    {
+      "id": "D-019",
+      "decision": "TDD 范围仅覆盖阶段一 MVP",
+      "stage": "tdd-1",
+      "rationale": "用户选择 2A；阶段二和阶段三仅预留，不纳入当前测试契约。"
+    },
+    {
+      "id": "D-020",
+      "decision": "L1 单元层测试解析工作台纯逻辑：文档索引、完成度、源码引用、风险等级、AC 状态和脚本安全边界",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；当前 TDD 契约服务第一版解析链路，不测试真实麻将后端业务逻辑。"
+    },
+    {
+      "id": "D-021",
+      "decision": "L2 组件层按 6 个 MVP 页面逐页测试状态与交互",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；页面文档已定义总览、模块地图、核心流程、影响范围、脚本索引、验收契约的状态、流转和验收标准。"
+    },
+    {
+      "id": "D-022",
+      "decision": "L3 集成契约层测试文件与数据契约，包括页面清单、页面文档、HTML 原型、设计系统、文档索引、脚本输出和 document 同步契约",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；解析工作台 MVP 没有线上 API，真实集成面是文件、文档、HTML、索引和脚本输出之间的一致性。"
+    },
+    {
+      "id": "D-023",
+      "decision": "L4 E2E 业务流测试 4 条核心用户旅程：lei 学习源码结构、he 判断需求影响、交付验收、脚本辅助",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；解析工作台 MVP 的端到端价值是沿文档链路完成理解、影响判断、脚本辅助和验收交接。"
+    },
+    {
+      "id": "D-024",
+      "decision": "L5 安全鉴权层测试无登录系统下的安全边界，包括无假登录/假权限、全员同内容、未验证不可冒充已验证、脚本不得写业务代码、敏感信息保护和 P0 门禁不可绕过",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；解析工作台 MVP 不做账号体系，但仍需要只读源码、显式未验证、敏感数据保护和门禁不可绕过。"
+    },
+    {
+      "id": "D-025",
+      "decision": "L6 边界异常层测试本地文档、索引、页面、脚本和同步异常，包括索引缺失、空文档、缺页面/HTML、源码引用缺失、超长文本、未知状态、重复操作、脚本失败、文档冲突和同步过期",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；解析工作台 MVP 的主要异常面来自本地文件、文档索引、页面渲染、脚本结果和目录同步。"
+    },
+    {
+      "id": "D-026",
+      "decision": "L7 无障碍层测试文档工作台基础无障碍，包括键盘可达、焦点可见、导航语义、搜索筛选可操作、表格语义、状态标签文字化、复制按钮可读、标题层级和移动端可读",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；当前产品是内部文档工作台，基础无障碍足以覆盖高频阅读、导航、筛选、表格和复制路径操作。"
+    },
+    {
+      "id": "D-027",
+      "decision": "L8 性能基线层测试静态工作台性能基线，包括 HTML 本地打开、首屏渲染、页面切换、搜索筛选、长表格滚动、超长路径渲染、脚本扫描耗时、同步检查耗时和无网络可读",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；解析工作台 MVP 是本地静态页面和脚本链路，性能基线应聚焦本地打开、文档渲染、搜索筛选、大列表、脚本扫描和无网络可读。"
+    },
+    {
+      "id": "D-028",
+      "decision": "最终验收门禁采用标准门禁：全部 P0 + P1 用例转绿才可交付，P2 尽力；核心纯逻辑覆盖率 >=90%，脚本/同步检查 >=80%，页面交互 >=70%；安全和边界 P0 零失败；当前解析 MVP 暂不启用变异测试",
+      "stage": "tdd-1",
+      "rationale": "用户选择 1A；该门禁适合作为 Coding Agent /go 终止条件，同时不过度加重解析 MVP。"
+    },
+    {
+      "id": "D-029",
+      "decision": "用户确认测试决策总蓝图并进入 TDD 阶段 II，已生成 output/tests/ 下的分层 TDD 文档、测试索引和验收门禁与 GOAL 契约",
+      "stage": "tdd-2",
+      "rationale": "用户选择 A；阶段 II 静默产出完成，108 条用例已形成 Coding Agent 可消费的验收底账。"
+    },
+    {
+      "id": "D-030",
+      "decision": "Coding Agent 开发阶段补齐 code-front/workbench-core.mjs 和 script/validate-goal.mjs，并通过 108/108 条 GOAL 门禁检查",
+      "stage": "coding-1",
+      "rationale": "用户要求进入 Coding Agent 开发；按验收门禁与 GOAL 契约实现可运行验证入口，报告 gate=PASS。"
+    }
+  ],
+  "category": "internal-tooling",
+  "prd_type": "project-analysis-and-delivery-workflow",
+  "agents_used": {
+    "lead_pm_calls": 0,
+    "reviewer_calls": 0,
+    "author_calls": 0,
+    "total_tokens_estimated": 0
+  },
+  "deliverables": {
+    "scene_anchor": "scene-anchor.md",
+    "proposal_v0": null,
+    "proposal_v1": "proposal-v1.md",
+    "debate_log": "debate-log.md",
+    "assumptions": "assumptions.md",
+    "conversation": "conversation.md",
+    "evidence": [
+      "evidence/competitors.md",
+      "evidence/benchmark.md"
+    ],
+    "drafts": [],
+    "final_prd": "output/PRD详细版.md",
+    "prd_summary": "output/PRD-summary.md",
+    "prd_dev": "output/PRD-dev.md",
+    "design_blueprint": "output/设计决策蓝图.md",
+    "design_system": "output/DESIGN.md",
+    "design_tokens": "output/tokens.css",
+    "design_showcase": "output/design-system-showcase.html",
+    "page_list": "output/页面清单.md",
+    "page_docs_dir": "output/pages/",
+    "tech_plan": "output/技术方案.md",
+    "tdd_blueprint": "output/测试决策蓝图.md",
+    "tests_dir": "output/tests/",
+    "test_index": "output/tests/测试索引.md",
+    "goal_contract": "output/tests/验收门禁与GOAL契约.md",
+    "goal_validation_report": "output/goal-validation-report.json"
+  },
+  "user_inputs_log": [
+    {
+      "stage": "0",
+      "timestamp": "2026-07-09T06:06:13Z",
+      "summary": "用户要求按照营队链路进行开发。"
+    },
+    {
+      "stage": "0",
+      "timestamp": "2026-07-09T06:10:45Z",
+      "summary": "用户确认第一版只做解析、文档和契约，不直接修改业务代码。"
+    },
+    {
+      "stage": "1",
+      "timestamp": "2026-07-09T06:13:16Z",
+      "summary": "用户选择 1A 2A：第一版做全套解析文档、迁移计划和验收契约；链路产物放 output，最终文档同步到 document。"
+    },
+    {
+      "stage": "1",
+      "timestamp": "2026-07-09T06:14:49Z",
+      "summary": "用户选择 1A 2A：成功标准为 lei 能讲清源码结构、he 能判断需求影响范围；解析深度深入核心流程。"
+    },
+    {
+      "stage": "1",
+      "timestamp": "2026-07-09T06:16:44Z",
+      "summary": "用户选择 1A 2A：验收口径为文档完整性、源码引用、影响范围表和验收契约都齐；脚本边界为轻量扫描/索引脚本。"
+    },
+    {
+      "stage": "5",
+      "timestamp": "2026-07-09T06:25:27Z",
+      "summary": "PRD详细版、PRD-summary、PRD-dev 已生成；格式、证据、一致性、可执行性校验全部通过。"
+    },
+    {
+      "stage": "design-0",
+      "timestamp": "2026-07-09T06:33:49Z",
+      "summary": "用户要求进入设计；已读取 design-master 规则和 PRD详细版，进入设计阶段 I。"
+    },
+    {
+      "stage": "design-1",
+      "timestamp": "2026-07-09T06:37:39Z",
+      "summary": "用户选择 1A 2A：桌面 Web 工作台为主，移动端可读响应式；左侧导航工作台信息架构。"
+    },
+    {
+      "stage": "design-1",
+      "timestamp": "2026-07-09T06:40:50Z",
+      "summary": "用户选择 1C 2A：第一版不区分角色权限，所有人看到相同内容；功能拆为 6 个核心页面。"
+    },
+    {
+      "stage": "design-1",
+      "timestamp": "2026-07-09T06:43:12Z",
+      "summary": "用户选择 1A 2A：通用交互采用文档工作台交互；视觉风格采用浅色专业文档工具风。"
+    },
+    {
+      "stage": "design-1",
+      "timestamp": "2026-07-09T06:45:39Z",
+      "summary": "用户选择 1A 2A：数据源采用本地 Markdown/JSON 索引；技术栈采用静态 HTML 原型、Markdown 文档和 Shell 脚本。"
+    },
+    {
+      "stage": "design-2",
+      "timestamp": "2026-07-09T07:01:03Z",
+      "summary": "用户确认最终蓝图；已静默生成 DESIGN、tokens.css、设计系统展示页、页面清单、6 个页面文档、6 个高保真 HTML 和技术方案，并完成基础自检。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:09:05Z",
+      "summary": "用户选择 1A 2A：TDD 覆盖全 8 层，仅覆盖阶段一 MVP。已创建 output/测试决策蓝图.md。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:14:41Z",
+      "summary": "用户选择 L1 单元层 1A：测试解析工作台纯逻辑，包括文档索引、完成度、源码引用、风险等级、AC 状态和脚本安全边界；明确不测试真实麻将后端业务逻辑。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:16:10Z",
+      "summary": "用户选择 L2 组件层 1A：按 6 个 MVP 页面逐页测试渲染、状态、搜索筛选、复制路径、页面跳转和状态标签。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:17:18Z",
+      "summary": "用户选择 L3 集成契约层 1A：测试 output 文档、pages 文档/HTML、设计系统、文档索引、脚本输出和 document 同步之间的文件与数据契约。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:18:52Z",
+      "summary": "用户选择 L4 E2E 业务流 1A：测试 lei 学习源码结构、he 判断需求影响、交付验收、脚本辅助 4 条核心用户旅程。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:20:08Z",
+      "summary": "用户选择 L5 安全鉴权层 1A：测试无登录系统下的安全边界，包括无假登录/假权限、全员同内容、未验证不可冒充已验证、脚本不得写业务代码、敏感信息保护和 P0 门禁不可绕过。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:22:25Z",
+      "summary": "用户选择 L6 边界异常层 1A：测试本地文档、索引、页面、脚本和同步异常，包括索引缺失、空文档、缺页面/HTML、源码引用缺失、超长文本、未知状态、重复操作、脚本失败、文档冲突和同步过期。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:24:04Z",
+      "summary": "用户选择 L7 无障碍层 1A：测试文档工作台基础无障碍，包括键盘可达、焦点可见、导航语义、搜索筛选、表格语义、状态标签、复制按钮、标题层级和移动端可读。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:26:03Z",
+      "summary": "用户选择 L8 性能基线层 1A：测试静态工作台性能基线，包括 HTML 本地打开、首屏渲染、页面切换、搜索筛选、长表格滚动、超长路径渲染、脚本扫描耗时、同步检查耗时和无网络可读。"
+    },
+    {
+      "stage": "tdd-1",
+      "timestamp": "2026-07-09T07:27:47Z",
+      "summary": "用户选择最终验收门禁 1A：全部 P0 + P1 用例转绿才可交付，P2 尽力；核心纯逻辑覆盖率 >=90%，脚本/同步检查 >=80%，页面交互 >=70%；安全和边界 P0 零失败；当前解析 MVP 暂不启用变异测试。"
+    },
+    {
+      "stage": "tdd-2",
+      "timestamp": "2026-07-09T07:37:31Z",
+      "summary": "用户确认 A，进入 TDD 阶段 II 静默产出；已生成 output/tests/ 下 16 份分层 TDD 文档、测试索引和验收门禁与 GOAL 契约，共 108 条用例。"
+    }
+  ]
+}
