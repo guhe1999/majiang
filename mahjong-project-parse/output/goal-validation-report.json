@@ -1,0 +1,983 @@
+{
+  "generatedAt": "2026-07-09T07:57:10.668Z",
+  "total": 108,
+  "passed": 108,
+  "failed": 0,
+  "p0Failed": 0,
+  "p1Failed": 0,
+  "gate": "PASS",
+  "results": [
+    {
+      "id": "U-WB-01",
+      "layer": "单元",
+      "priority": "P0",
+      "name": "解析合法文档索引",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "U-WB-02",
+      "layer": "单元",
+      "priority": "P0",
+      "name": "缺少必填索引字段时报错",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "U-WB-03",
+      "layer": "单元",
+      "priority": "P0",
+      "name": "计算 F1-F7 完成度",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "U-WB-04",
+      "layer": "单元",
+      "priority": "P0",
+      "name": "源码引用缺失标记未验证",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "U-WB-05",
+      "layer": "单元",
+      "priority": "P1",
+      "name": "风险等级由缺口推导",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "U-WB-06",
+      "layer": "单元",
+      "priority": "P0",
+      "name": "AC 状态按 P0/P1/P2 聚合",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "U-WB-07",
+      "layer": "单元",
+      "priority": "P0",
+      "name": "脚本越界写业务代码被拒",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "U-WB-08",
+      "layer": "单元",
+      "priority": "P1",
+      "name": "未知状态降级为待确认",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-OVR-01",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "渲染 4 个以上状态指标",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-OVR-02",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "高风险项首屏可见",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-OVR-03",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "索引缺失显示错误块",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-OVR-04",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "下一步入口可跳转",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-OVR-05",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "搜索模块或流程有反馈",
+      "status": "PASS",
+      "durationMs": 1,
+      "details": ""
+    },
+    {
+      "id": "C-OVR-06",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "移动端长文本不挤压",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-MOD-01",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "展示至少 6 类模块分组",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-MOD-02",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "默认选中 engine 模块",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-MOD-03",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "无源码引用标记未验证",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-MOD-04",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "复制源码路径有反馈",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-MOD-05",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "可跳转核心流程和影响范围",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-MOD-06",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "搜索无结果显示推荐模块",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-FLO-01",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "覆盖 6 类核心流程",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-FLO-02",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "默认展示房间生命周期",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-FLO-03",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "切换流程更新涉及模块",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-FLO-04",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "缺源码引用标记未验证",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-FLO-05",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "异常路径可见",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-FLO-06",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "可跳转影响范围和验收契约",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-IMP-01",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "展示至少 6 类需求类型",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-IMP-02",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "每类需求有模块映射",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-IMP-03",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "每类需求有流程映射",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-IMP-04",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "高风险项置顶且醒目",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-IMP-05",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "无匹配需求提示开放问题",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-IMP-06",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "推荐阅读跳转可用",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-SCR-01",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "展示至少 4 类脚本用途",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-SCR-02",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "每个脚本展示输入输出",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-SCR-03",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "只读边界醒目",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-SCR-04",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "越界脚本标记不可用",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-SCR-05",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "复制脚本路径有反馈",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-SCR-06",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "最近运行失败展示摘要",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-ACC-01",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "展示 P0/P1/P2 AC",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-ACC-02",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "P0 未通过显示阻塞",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-ACC-03",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "未验证结论单独展示",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-ACC-04",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "筛选 AC 后结果正确",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-ACC-05",
+      "layer": "组件",
+      "priority": "P1",
+      "name": "可复制 AC 文本",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "C-ACC-06",
+      "layer": "组件",
+      "priority": "P0",
+      "name": "进入 TDD 入口受门禁状态影响",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-01",
+      "layer": "集成契约",
+      "priority": "P0",
+      "name": "页面清单 6 页均有 MD",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-02",
+      "layer": "集成契约",
+      "priority": "P0",
+      "name": "页面清单 6 页均有 HTML",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-03",
+      "layer": "集成契约",
+      "priority": "P0",
+      "name": "页面文档章节完整",
+      "status": "PASS",
+      "durationMs": 2,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-04",
+      "layer": "集成契约",
+      "priority": "P1",
+      "name": "HTML 与页面文档主标题一致",
+      "status": "PASS",
+      "durationMs": 1,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-05",
+      "layer": "集成契约",
+      "priority": "P0",
+      "name": "HTML 跨页链接有效",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-06",
+      "layer": "集成契约",
+      "priority": "P1",
+      "name": "tokens.css 与页面 token 使用一致",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-07",
+      "layer": "集成契约",
+      "priority": "P0",
+      "name": "文档索引字段支撑搜索筛选",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-08",
+      "layer": "集成契约",
+      "priority": "P1",
+      "name": "脚本输出可被验收契约消费",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-09",
+      "layer": "集成契约",
+      "priority": "P0",
+      "name": "output 到 document 同步可检测过期",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "I-FILE-10",
+      "layer": "集成契约",
+      "priority": "P0",
+      "name": "业务代码目录不在写入范围",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-LEARN-01",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "从总览进入模块地图",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-LEARN-02",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "从模块地图进入核心流程",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-LEARN-03",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "源码引用在跨页保持一致",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-LEARN-04",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "缺引用结论不会被当成已验证",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-LEARN-05",
+      "layer": "E2E",
+      "priority": "P1",
+      "name": "搜索文件后可继续学习链路",
+      "status": "PASS",
+      "durationMs": 2,
+      "details": ""
+    },
+    {
+      "id": "E-IMPACT-01",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "从总览进入影响范围",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-IMPACT-02",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "新增玩法规则映射到模块和流程",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-IMPACT-03",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "高风险需求推荐核心流程阅读",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-IMPACT-04",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "无法归类需求阻止直接实现",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-IMPACT-05",
+      "layer": "E2E",
+      "priority": "P1",
+      "name": "影响范围可进入验收契约",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-ACCEPT-01",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "从总览进入验收契约",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-ACCEPT-02",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "P0 未通过阻止交付",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-ACCEPT-03",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "P0/P1 全绿显示可交付",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-ACCEPT-04",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "未验证结论可定位来源",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-ACCEPT-05",
+      "layer": "E2E",
+      "priority": "P1",
+      "name": "筛选 P0 后复制 AC",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-SCRIPT-01",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "打开脚本索引看到只读边界",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-SCRIPT-02",
+      "layer": "E2E",
+      "priority": "P1",
+      "name": "复制脚本路径后仍可回验收",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-SCRIPT-03",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "脚本失败影响门禁",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-SCRIPT-04",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "越界脚本不可进入可用清单",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "E-SCRIPT-05",
+      "layer": "E2E",
+      "priority": "P0",
+      "name": "脚本输出为空提示人工核查",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-01",
+      "layer": "安全鉴权",
+      "priority": "P0",
+      "name": "不展示假登录态",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-02",
+      "layer": "安全鉴权",
+      "priority": "P0",
+      "name": "所有人看到同一套内容",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-03",
+      "layer": "安全鉴权",
+      "priority": "P0",
+      "name": "未验证结论不可显示为已验证",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-04",
+      "layer": "安全鉴权",
+      "priority": "P0",
+      "name": "脚本不得写业务代码",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-05",
+      "layer": "安全鉴权",
+      "priority": "P0",
+      "name": "P0 门禁不可绕过",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-06",
+      "layer": "安全鉴权",
+      "priority": "P1",
+      "name": "不展示敏感信息",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-07",
+      "layer": "安全鉴权",
+      "priority": "P1",
+      "name": "不复制大段源码",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "S-BOUND-08",
+      "layer": "安全鉴权",
+      "priority": "P1",
+      "name": "断链必须可发现",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-01",
+      "layer": "边界异常",
+      "priority": "P0",
+      "name": "JSON 索引缺失显示错误",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-02",
+      "layer": "边界异常",
+      "priority": "P0",
+      "name": "JSON 字段缺失阻塞契约",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-03",
+      "layer": "边界异常",
+      "priority": "P0",
+      "name": "空 Markdown 标记待补充",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-04",
+      "layer": "边界异常",
+      "priority": "P0",
+      "name": "缺页面 MD/HTML 暴露阻塞",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-05",
+      "layer": "边界异常",
+      "priority": "P0",
+      "name": "源码引用缺失阻止最终完成",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-06",
+      "layer": "边界异常",
+      "priority": "P1",
+      "name": "超长路径不撑破布局",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-07",
+      "layer": "边界异常",
+      "priority": "P1",
+      "name": "搜索无结果有下一步",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-08",
+      "layer": "边界异常",
+      "priority": "P0",
+      "name": "未知状态降级待确认",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-09",
+      "layer": "边界异常",
+      "priority": "P1",
+      "name": "重复复制/快速筛选不乱序",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "B-DATA-10",
+      "layer": "边界异常",
+      "priority": "P0",
+      "name": "同步过期不能交付",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-01",
+      "layer": "无障碍",
+      "priority": "P0",
+      "name": "左侧导航键盘可达",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-02",
+      "layer": "无障碍",
+      "priority": "P0",
+      "name": "搜索和筛选键盘可操作",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-03",
+      "layer": "无障碍",
+      "priority": "P0",
+      "name": "焦点样式清晰可见",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-04",
+      "layer": "无障碍",
+      "priority": "P0",
+      "name": "状态标签不只靠颜色",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-05",
+      "layer": "无障碍",
+      "priority": "P1",
+      "name": "表格包含表头语义",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-06",
+      "layer": "无障碍",
+      "priority": "P1",
+      "name": "复制按钮有可读名称",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-07",
+      "layer": "无障碍",
+      "priority": "P0",
+      "name": "标题层级稳定",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "A-WB-08",
+      "layer": "无障碍",
+      "priority": "P1",
+      "name": "移动端内容不重叠",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "P-WB-01",
+      "layer": "性能",
+      "priority": "P0",
+      "name": "6 个页面本地快速打开",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "P-WB-02",
+      "layer": "性能",
+      "priority": "P0",
+      "name": "总览首屏快速渲染",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "P-WB-03",
+      "layer": "性能",
+      "priority": "P1",
+      "name": "页面切换无明显卡顿",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "P-WB-04",
+      "layer": "性能",
+      "priority": "P1",
+      "name": "搜索筛选快速反馈",
+      "status": "PASS",
+      "durationMs": 9,
+      "details": ""
+    },
+    {
+      "id": "P-WB-05",
+      "layer": "性能",
+      "priority": "P1",
+      "name": "长表格可滚动阅读",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "P-WB-06",
+      "layer": "性能",
+      "priority": "P1",
+      "name": "超长路径不造成横向失控",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "P-WB-07",
+      "layer": "性能",
+      "priority": "P0",
+      "name": "脚本扫描耗时有基线",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    },
+    {
+      "id": "P-WB-08",
+      "layer": "性能",
+      "priority": "P0",
+      "name": "无网络时核心内容可读",
+      "status": "PASS",
+      "durationMs": 0,
+      "details": ""
+    }
+  ]
+}
