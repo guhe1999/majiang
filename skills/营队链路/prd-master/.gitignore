@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# 项目运行时产生的（不属于 prd-master 工具本身）
+# 用户跑出来的 projects/ 应该在仓库外，不进版本控制
+projects/
+
+# 临时
+*.bak
+*.tmp
+*.log
