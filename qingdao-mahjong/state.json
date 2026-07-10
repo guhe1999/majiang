@@ -1,0 +1,27 @@
+{
+  "project": "qingdao-mahjong",
+  "display_name": "青岛推倒胡",
+  "current_phase": "0-范围与事实",
+  "status": "in_progress",
+  "last_updated_at_utc": "2026-07-10T00:00:00Z",
+  "next_action": "确认首版房间的 P0 规则：是否不让吃牌、是否带混、胡牌方式/一炮多响、计分模型。",
+  "confirmed_facts": [
+    "现有代码只能作为影响评估，不能替代产品规则来源。",
+    "公开资料显示青岛麻将存在地方规则选项，推倒胡通用规则不能直接等同于青岛规则。"
+  ],
+  "open_questions": [
+    "首版固定为不让吃牌的青岛推倒胡，还是支持吃牌的青岛地方麻将？",
+    "首版是否带混牌，以及翻混、持混点炮和四混结算规则？",
+    "自摸、点炮、一炮多响和过胡的准确口径？",
+    "基础牌型与完整计分/封顶/杠分规则？",
+    "庄家、荒庄、留牌和跨局翻倍规则？"
+  ],
+  "artifacts": [
+    "README.md",
+    "规则讨论-V0.md",
+    "scene-anchor.md",
+    "assumptions.md",
+    "debate-log.md",
+    "evidence/青岛麻将公开规则初查.md"
+  ]
+}
