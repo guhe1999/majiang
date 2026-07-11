@@ -3,3 +3,5 @@
 lei负责搭建项目，提取设计方案、学习源代码，he负责提新需求推动项目更新
 增加了kelei、jiahe两条分支
 项目按照构建大纲、策划、设计、验收迭代逐步推进重构，实现目标为扩展性强、模块化、低耦合度
+
+jiahe在跨设备开发时，需提前同步上下文，要先阅读：AGENTS.md、CONTEXT.md、HANDOFF.md 和 outline.md，检查当前 jiahe 分支状态，然后从 HANDOFF.md 的下一步继续开发。完成后更新 HANDOFF.md，并提交、推送到 jiahe。
